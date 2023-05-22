@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		776E6B6E2A1B9E13003D1710 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B6D2A1B9E13003D1710 /* ViewController2.swift */; };
+		776E6B702A1B9E45003D1710 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B6F2A1B9E45003D1710 /* CustomTableViewCell.swift */; };
+		776E6B722A1B9E60003D1710 /* CustomTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B712A1B9E60003D1710 /* CustomTableViewCell2.swift */; };
+		776E6B742A1B9E82003D1710 /* CustomTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B732A1B9E82003D1710 /* CustomTableViewCell3.swift */; };
+		776E6B762A1B9FC2003D1710 /* CustomSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B752A1B9FC2003D1710 /* CustomSectionTableViewCell.swift */; };
+		776E6B782A1BA174003D1710 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B772A1BA174003D1710 /* Data.swift */; };
 		77C593BC2A1B9A3900A4BCA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C593BB2A1B9A3900A4BCA7 /* AppDelegate.swift */; };
 		77C593BE2A1B9A3900A4BCA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C593BD2A1B9A3900A4BCA7 /* SceneDelegate.swift */; };
 		77C593C02A1B9A3900A4BCA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C593BF2A1B9A3900A4BCA7 /* ViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		776E6B6D2A1B9E13003D1710 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		776E6B6F2A1B9E45003D1710 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		776E6B712A1B9E60003D1710 /* CustomTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell2.swift; sourceTree = "<group>"; };
+		776E6B732A1B9E82003D1710 /* CustomTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell3.swift; sourceTree = "<group>"; };
+		776E6B752A1B9FC2003D1710 /* CustomSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionTableViewCell.swift; sourceTree = "<group>"; };
+		776E6B772A1BA174003D1710 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		77C593B82A1B9A3900A4BCA7 /* 2022b0522.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2022b0522.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C593BB2A1B9A3900A4BCA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77C593BD2A1B9A3900A4BCA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +114,13 @@
 				77C593BB2A1B9A3900A4BCA7 /* AppDelegate.swift */,
 				77C593BD2A1B9A3900A4BCA7 /* SceneDelegate.swift */,
 				77C593BF2A1B9A3900A4BCA7 /* ViewController.swift */,
+				776E6B772A1BA174003D1710 /* Data.swift */,
 				77C593C12A1B9A3900A4BCA7 /* Main.storyboard */,
+				776E6B752A1B9FC2003D1710 /* CustomSectionTableViewCell.swift */,
+				776E6B732A1B9E82003D1710 /* CustomTableViewCell3.swift */,
+				776E6B712A1B9E60003D1710 /* CustomTableViewCell2.swift */,
+				776E6B6F2A1B9E45003D1710 /* CustomTableViewCell.swift */,
+				776E6B6D2A1B9E13003D1710 /* ViewController2.swift */,
 				77C593C42A1B9A3D00A4BCA7 /* Assets.xcassets */,
 				77C593C62A1B9A3D00A4BCA7 /* LaunchScreen.storyboard */,
 				77C593C92A1B9A3D00A4BCA7 /* Info.plist */,
@@ -259,8 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C593C02A1B9A3900A4BCA7 /* ViewController.swift in Sources */,
+				776E6B702A1B9E45003D1710 /* CustomTableViewCell.swift in Sources */,
+				776E6B6E2A1B9E13003D1710 /* ViewController2.swift in Sources */,
 				77C593BC2A1B9A3900A4BCA7 /* AppDelegate.swift in Sources */,
+				776E6B762A1B9FC2003D1710 /* CustomSectionTableViewCell.swift in Sources */,
 				77C593BE2A1B9A3900A4BCA7 /* SceneDelegate.swift in Sources */,
+				776E6B742A1B9E82003D1710 /* CustomTableViewCell3.swift in Sources */,
+				776E6B782A1BA174003D1710 /* Data.swift in Sources */,
+				776E6B722A1B9E60003D1710 /* CustomTableViewCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
