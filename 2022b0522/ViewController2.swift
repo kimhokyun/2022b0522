@@ -22,12 +22,17 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.textField.delegate = self
         
         // Do any additional setup after loading the view.
     }
 
     func fetchData(keyword : String) {
-        guard let url = URL(string: "http://localhost:3300/dcx/3/conversation/\(keyword)") else { return }
+        guard let encodedKeyword = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+                    // Handle error here
+                    return
+                }
+        guard let url = URL(string: "http://localhost:3300/dcx/3/conversation/\(encodedKeyword)") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -47,7 +52,7 @@ class ViewController2: UIViewController {
                 }
             } catch let error {
                 print(error.localizedDescription)
-                self.conversations.append(Conversation(keyword: keyword, response: ""))
+//                self.conversations.append(Conversation(keyword: keyword, response: ""))
 //                self.tableView.reloadData()
             }
         }.resume()
@@ -58,7 +63,13 @@ class ViewController2: UIViewController {
     }
 
     @IBAction func send(_ sender: Any) {
-        fetchData(keyword: self.textField.text ?? "")
+        var inputText = self.textField.text ?? ""
+        if inputText != "" {
+            self.conversations.append(Conversation(keyword: inputText, response: ""))
+        }
+        
+        self.tableView.reloadData()
+        fetchData(keyword: inputText)
     }
     
 }
@@ -80,13 +91,31 @@ extension ViewController2 : UITableViewDelegate, UITableViewDataSource {
         if conversations[indexPath.row].response.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell2", for: indexPath) as! CustomTableViewCell2
             cell.keywordLabel.text = conversations[indexPath.row].keyword
+            cell.timeLabel.text = formattedTime
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell3", for: indexPath) as! CustomTableViewCell3
             cell.responseLabel.text = conversations[indexPath.row].response
+            cell.timeLabel.text = formattedTime
             return cell
         }
         
     }
 
+}
+
+extension ViewController2: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == self.textField {
+          var inputText = self.textField.text ?? ""
+          if inputText != "" {
+              self.conversations.append(Conversation(keyword: inputText, response: ""))
+          }
+          
+          self.tableView.reloadData()
+          fetchData(keyword: inputText)
+          self.textField.text = ""
+      }
+    return true
+  }
 }
