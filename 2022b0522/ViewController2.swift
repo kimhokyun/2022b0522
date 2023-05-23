@@ -71,7 +71,12 @@ extension ViewController2 : UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateFormat = "a h:mm"
+        let currentTime = Date()
+        let formattedTime = dateFormatter.string(from: currentTime)
+        
         if conversations[indexPath.row].response.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell2", for: indexPath) as! CustomTableViewCell2
             cell.keywordLabel.text = conversations[indexPath.row].keyword
