@@ -137,6 +137,10 @@
                                                 <constraint firstItem="MZE-zM-f7p" firstAttribute="trailing" secondItem="wNM-Oc-iQ6" secondAttribute="trailingMargin" id="w4V-Sd-U5o"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="keywordLabel" destination="MZE-zM-f7p" id="EEe-2F-6FW"/>
+                                            <outlet property="timeLabel" destination="GfM-bU-irf" id="nKY-Cf-3Ko"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell3" rowHeight="60" id="8H3-yQ-Nc5" customClass="CustomTableViewCell3" customModule="_022b0522" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="110" width="393" height="60"/>
@@ -166,6 +170,10 @@
                                                 <constraint firstItem="ErP-c1-wMR" firstAttribute="top" secondItem="ZmI-2u-Joh" secondAttribute="topMargin" id="uVG-ig-Ofj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="responseLabel" destination="ErP-c1-wMR" id="gMn-Wj-01x"/>
+                                            <outlet property="timeLabel" destination="H4A-Pp-v8W" id="0GD-g4-ofk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -178,6 +186,9 @@
                                 <rect key="frame" x="314" y="775" width="69" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="보내기"/>
+                                <connections>
+                                    <action selector="send:" destination="Ncd-32-uF0" eventType="touchUpInside" id="Kgu-yi-m2h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SvL-QR-tCn"/>
@@ -201,6 +212,11 @@
                             <constraint firstItem="2O2-sT-Wxs" firstAttribute="centerY" secondItem="XxU-J2-L0j" secondAttribute="centerY" id="wcj-bd-S9K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sendButton" destination="gIB-Qf-Tmu" id="cEt-9k-wMH"/>
+                        <outlet property="tableView" destination="JCp-qw-nHC" id="Byn-kE-9AG"/>
+                        <outlet property="textField" destination="hsS-3b-Nym" id="8mP-0T-SQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ny-Xb-xZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,9 @@ import UIKit
 
 class CustomTableViewCell3: UITableViewCell {
 
+    @IBOutlet weak var responseLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
